@@ -1,3 +1,32 @@
-<ul>
-  <li *ngFor="let plant of plants">{{plant.id}} - {{plant.nombre_comun}} - {{plant.tipo}}</li>
-</ul>
+<main class="container-fluid">
+  <img src="../../assets/plants.png" alt="plants" />
+  <table class="table table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Nombre común</th>
+        <th>Tipo</th>
+        <th>Clima</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let plant of plants">
+        <td>
+          <strong>{{ plant.id }}</strong>
+        </td>
+        <td>{{ plant.nombre_comun }}</td>
+        <td>{{ plant.tipo }}</td>
+        <td>{{ plant.clima }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="container-fluid" id="data">
+    <p *ngIf="numInt && numExt">
+      Total plantas de interior: {{ numInt }}<br />
+      Total plantas de exterior: {{ numExt }}
+    </p>
+  </div>
+</main>
+<footer>
+  Contact us: +57 3102105253 - info@viveroelotonio.com - @viveroelotonio
+</footer>

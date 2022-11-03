@@ -10,6 +10,8 @@ import { PlantsService } from './plants.service';
 export class PlantsComponent implements OnInit {
 
   plants: Plant[] = []
+  numInt!: number;
+  numExt!: number;
 
   constructor(private plantsService: PlantsService) { }
 
@@ -20,6 +22,8 @@ export class PlantsComponent implements OnInit {
   getPlants() {
     this.plantsService.getPlants().subscribe((plants) => {
       this.plants = plants;
+      this.numInt = plants.filter((plant) => plant.tipo === 'Interior').length
+      this.numExt = plants.filter((plant) => plant.tipo === 'Exterior').length
     })
   }
 

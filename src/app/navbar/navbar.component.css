@@ -1,0 +1,24 @@
+#nav {
+  padding-top: 14px;
+  padding-left: 98px;
+  padding-right: 98px;
+}
+
+h1 {
+  font-family: "Kaisei Decol";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+
+  margin-bottom: 0px;
+
+  color: #000000;
+}
+
+hr {
+  background: #c4c4c4;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  margin-top: 20.54px;
+  margin-bottom: 0px;
+}
